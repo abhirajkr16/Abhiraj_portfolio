@@ -1,15 +1,15 @@
-/* ==========================================================================
-   Core App Entrypoint / Bootstrapper
-   ========================================================================== */
+/* App Bootstrap */
 
 $(document).ready(function () {
 
-    // Fetch and render Skills
+    // Skills
+
     fetchData().then(data => {
         showSkills(data);
     });
 
-    // Fetch and render Projects preview
+    // Projects
+
     fetchData("projects").then(data => {
         showProjects(data);
     });

@@ -1,0 +1,30 @@
+[
+  {
+    "degree": "B.Tech Computer Science Engineering",
+    "college": "Maharaja Agrasen Institute of Technology",
+    "logo": "./assets/images/education/mait.webp",
+    "status": "Pursuing",
+    "semester": "5th Semester",
+    "cgpa": "8.50",
+    "duration": "2025 - 2028",
+    "current": true
+  },
+  {
+    "degree": "Diploma in Mechanical Engineering",
+    "college": "DSEU G.B. Pant Okhla-II Campus",
+    "logo": "./assets/images/education/dseu.webp",
+    "status": "Completed",
+    "cgpa": "8.90",
+    "duration": "2022 - 2025",
+    "current": false
+  },
+  {
+    "degree": "Secondary Education",
+    "college": "Bihar School Examination Board",
+    "logo": "./assets/images/education/bseb.webp",
+    "status": "Completed",
+    "percentage": "89.6%",
+    "year": "2020",
+    "current": false
+  }
+]

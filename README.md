@@ -277,6 +277,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Author
 
 - **Name**: Abhiraj Kumar
-- **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/abhiraj-kumar-474934308/)
-- **GitHub**: [GitHub Profile](https://github.com/decode16)
-- **Portfolio**: [Portfolio Site](https://its-abhi-portfolio.netlify.app/)
+

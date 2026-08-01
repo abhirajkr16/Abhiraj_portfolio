@@ -61,3 +61,36 @@ $(function () {
     });
 
 });
+/* Scroll Reveal */
+
+const revealElements = document.querySelectorAll(
+    ".education-card, .stat-card, .skill-category"
+);
+
+const revealObserver = new IntersectionObserver(
+
+    (entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("show");
+
+            }
+
+        });
+
+    },
+
+    {
+        threshold: 0.2
+    }
+
+);
+
+revealElements.forEach((element) => {
+
+    revealObserver.observe(element);
+
+});
