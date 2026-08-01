@@ -1,62 +1,101 @@
 [
   {
-    "name": "Portfolio Website",
-    "desc": "Personal Portfolio Website. Don't Need Much Info About It, Just Scroll Down. You're Here Only!",
-    "image": "portfolioweb",
-    "category": "basicweb",
-    "links": {
-      "view": "https://its-abhi-portfolio.netlify.app/",
-      "code": "https://github.com/decode16/Abhiraj-portfolio.git"
-    }
+    "featured": true,
+    "status": "Completed",
+    "title": "Distributed URL Shortener",
+    "subtitle": "Backend System Design Project",
+    "description": "Scalable URL shortening service built with Node.js, Express.js, MySQL, Redis and Docker. Designed using production-inspired architecture with JWT authentication, analytics and custom aliases.",
+    "image": "portfolio.png",
+    "category": "Backend",
+    "technologies": [
+      "Node.js",
+      "Express",
+      "MySQL",
+      "Redis",
+      "Docker",
+      "JWT",
+      "REST API"
+    ],
+    "highlights": [
+      "Redis Caching",
+      "JWT Authentication",
+      "Analytics Dashboard",
+      "Dockerized",
+      "REST APIs"
+    ],
+    "github": "YOUR_GITHUB",
+  "demo": "https://orbitminds.vercel.app"
+
   },
+
   {
-    "name": "Apna website",
-    "desc": "Apna collage full website clone.Only frontend is here.",
-    "image": "apnaweb",
-    "category": "basicweb",
-    "links": {
-      "view": "https://apnawebsitewithoutresponsive.netlify.app/",
-      "code": "https://github.com/decode16/apna-collage-webpage.git"
-    }
+    "featured": false,
+    "status": "Completed",
+    "title": "OrbitMinds",
+    "subtitle": "AI-Powered Agriculture Platform",
+    "description": "AI-powered crop monitoring and irrigation advisory system built using satellite imagery and machine learning.",
+    "image": "portfolio.png",
+    "category": "AI",
+    "technologies": [
+      "Python",
+      "Flask",
+      "Machine Learning",
+      "Google Earth Engine"
+    ],
+    "github": "YOUR_GITHUB",
+    "demo": ""
   },
+
   {
-    "name": "7-Cylinder-Rotary Engine",
-    "desc": "Design a 7-cylinder rotyary engine using solidworks, blender. Blender is used for lighting, realistic texturing and rendering",
-    "image": "7mech1",
-    "category": "designing",
-    "links": {
-      "view": "https://www.instagram.com/p/DA8f5IdTE0s/?img_index=1",
-      "code": "#"
-    }
+    "featured": false,
+    "status": "Completed",
+    "title": "Portfolio Website",
+    "subtitle": "Personal Portfolio",
+    "description": "Modern developer portfolio built using HTML, CSS and JavaScript with modular architecture and smooth animations.",
+    "image": "portfolio.png",
+    "category": "Frontend",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "github": "YOUR_GITHUB",
+    "demo": ""
   },
+
   {
-    "name": "Clutch Plate Assembly",
-    "desc": "Full assembly of mechanical fully functional clutch plate using solidworks.",
-    "image": "clutchmech",
-    "category": "designing",
-    "links": {
-      "view": "https://www.instagram.com/p/C_GAvA3vDml/?img_index=1",
-      "code": "#"
-    }
+    "featured": false,
+    "status": "Completed",
+    "title": "Farm Produce Management",
+    "subtitle": "Full Stack Application",
+    "description": "Farm produce management platform built using React, Node.js, Express and MySQL.",
+    "image": "portfolio.png",
+    "category": "Full Stack",
+    "technologies": [
+      "React",
+      "Node.js",
+      "Express",
+      "MySQL",
+      "JWT"
+    ],
+    "github": "YOUR_GITHUB",
+    "demo": ""
   },
+
   {
-    "name": "Robotic Arm",
-    "desc": "Dsign a full assembly of Robotic arm using blender.also textur and lighten it using Blender",
-    "image": "roboticarm",
-    "category": "designing",
-    "links": {
-      "view": "https://www.instagram.com/p/DA8ivTmzyJH/?img_index=1",
-      "code": "#"
-    }
-  },
-  {
-    "name": "Grenade",
-    "desc": "A high-detail 3D model of a grenade, meticulously crafted using SolidWorks for precision and Blender for realistic texturing and rendering.",
-    "image": "granade",
-    "category": "designing",
-    "links": {
-      "view": "https://www.instagram.com/p/DBAr1lRIeCC/?img_index=1",
-      "code": "#"
-    }
+    "featured": false,
+    "status": "Completed",
+    "title": "TradeWise",
+    "subtitle": "Frontend Clone",
+    "description": "Responsive Zerodha landing page clone focused on modern UI and reusable components.",
+    "image": "portfolio.png",
+    "category": "Frontend",
+    "technologies": [
+      "React",
+      "CSS",
+      "JavaScript"
+    ],
+    "github": "YOUR_GITHUB",
+    "demo": ""
   }
 ]

@@ -1,43 +1,242 @@
-/* ==========================================================================
-   Projects Component Module
-   ========================================================================== */
-
 function showProjects(projects) {
-    let projectsContainer = document.querySelector("#work .box-container");
-    let projectHTML = "";
-    projects.slice(0, 10).filter(project => project.category != "android").forEach(project => {
-        projectHTML += `
-        <div class="box tilt">
-      <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
-      <div class="content">
-        <div class="tag">
-        <h3>${project.name}</h3>
+
+  const featuredContainer = document.getElementById("featuredProject");
+  const projectsContainer = document.getElementById("projectsContainer");
+
+  const featuredProject = projects.find(project => project.featured);
+
+  const otherProjects = projects.filter(project => !project.featured);
+
+  if (featuredProject) {
+
+    featuredContainer.innerHTML = createFeaturedProject(featuredProject);
+
+  }
+
+  let html = "";
+
+  otherProjects.forEach(project => {
+
+    html += createProjectCard(project);
+
+  });
+
+  projectsContainer.innerHTML = html;
+
+}
+
+function createFeaturedProject(project) {
+
+  return `
+
+    <article class="featured-project">
+
+        <div class="featured-image">
+
+            <img
+                src="./assets/images/projects/${project.image}"
+                alt="${project.title}">
+
         </div>
-        <div class="desc">
-          <p>${project.desc}</p>
-          <div class="btns">
-            <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="${project.links.code}" class="btn" target="_blank">Source <i class="fas fa-code"></i></a>
-          </div>
+
+        <div class="featured-content">
+
+            <span class="project-category">
+
+                ${project.category}
+
+            </span>
+
+            <h3>
+
+                ${project.title}
+
+            </h3>
+
+            <h4>
+
+                ${project.subtitle}
+
+            </h4>
+
+           <p>
+
+${project.description}
+
+</p>
+
+<div class="project-highlights">
+
+    <h5>
+
+        Highlights
+
+    </h5>
+
+    <ul>
+
+        ${project.highlights.map(item => `
+
+            <li>
+
+                <i class="fas fa-check-circle"></i>
+
+                ${item}
+
+            </li>
+
+        `).join("")}
+
+    </ul>
+
+</div>
+
+            <div class="project-tech">
+
+                ${project.technologies.map(technology => `
+
+                    <span>
+
+                        ${technology}
+
+                    </span>
+
+                `).join("")}
+
+            </div>
+
+            <div class="project-actions">
+
+                <a
+                    href="${project.github}"
+                    target="_blank"
+                    class="btn btn-secondary">
+
+                    <i class="fab fa-github"></i>
+
+                    GitHub
+
+                </a>
+
+                ${project.demo ?
+
+      `
+
+                <a
+                    href="${project.demo}"
+                    target="_blank"
+                    class="btn btn-primary">
+
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+
+                    Live Demo
+
+                </a>
+
+                `
+
+      :
+
+      ""
+
+    }
+
+            </div>
+
         </div>
-      </div>
-    </div>`
-    });
-    projectsContainer.innerHTML = projectHTML;
 
-    // tilt js effect starts
-    VanillaTilt.init(document.querySelectorAll(".tilt"), {
-        max: 15,
-    });
+    </article>
 
-    /* ===== SCROLL REVEAL ANIMATION ===== */
-    const srtop = ScrollReveal({
-        origin: 'top',
-        distance: '80px',
-        duration: 1000,
-        reset: true
-    });
+    `;
 
-    /* SCROLL PROJECTS */
-    srtop.reveal('.work .box', { interval: 200 });
+}
+
+function createProjectCard(project) {
+
+  return `
+
+    <article class="project-card">
+
+        <div class="project-image">
+
+            <img
+                src="./assets/images/projects/${project.image}"
+                alt="${project.title}">
+
+        </div>
+
+        <div class="project-content">
+
+            <span class="project-category">
+
+                ${project.category}
+
+            </span>
+
+            <h3>
+
+                ${project.title}
+
+            </h3>
+
+            <p>
+
+                ${project.description}
+
+            </p>
+
+            <div class="project-tech">
+
+                ${project.technologies.slice(0, 4).map(technology => `
+
+                    <span>
+
+                        ${technology}
+
+                    </span>
+
+                `).join("")}
+
+            </div>
+
+            <div class="project-actions">
+
+                <a
+                    href="${project.github}"
+                    target="_blank"
+                    class="btn btn-secondary">
+
+                    GitHub
+
+                </a>
+
+                ${project.demo ?
+
+      `
+
+                <a
+                    href="${project.demo}"
+                    target="_blank"
+                    class="btn btn-primary">
+
+                    Demo
+
+                </a>
+
+                `
+
+      :
+
+      ""
+
+    }
+
+            </div>
+
+        </div>
+
+    </article>
+
+    `;
+
 }
