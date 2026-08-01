@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Skills Section Layout
+   ========================================================================== */
+
+.skills {
+  min-height: 70vh;
+  /* background: linear-gradient(to bottom, #57059e, #4a00e0); */
+  background-color: #eaf4f4;
+}
+
+.skills h2 {
+  color: #000000;
+}
+
+.skills h2 i {
+  color: #959ced;
+}
+
+.skills .heading span {
+  color: #65a69a;
+}
+
+.skills .container {
+  background: #c6efe8;
+  color: #000000;
+  border-radius: 1rem;
+  padding: 4rem;
+  width: 90%;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.skills .container .row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.skills .container .bar {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 10px #b6dcd5,
+             -5px -5px 10px #d6fffb;
+  background: #c6efe8;
+  /* background: rgba(0, 0, 22, 0.9); */
+  transition: 0.02s;
+}
+
+.skills .container .bar:hover {
+  /* box-shadow: 0 8px 10px rgba(0, 2, 68, 0.3) !important; */
+  background-color: rgba(101, 166, 154, 0.3) !important;
+  color: #ffffff;
+}
+
+.skills .container .bar .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.skills .container .bar .info i {
+  font-size: 4rem;
+}
+
+.skills .container .bar .info span {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Poppins";
+  margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .skills .container {
+    padding: 0;
+    margin: 0;
+  }
+  .skills .container .row {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2rem;
+    padding: 2rem 0.2rem 2rem 0.2rem;
+    gap: 2rem;
+  }
+  .skills .container {
+    margin-top: 15px;
+    width: 100%;
+  }
+}

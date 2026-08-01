@@ -1,0 +1,99 @@
+/* Scroll Indicator */
+
+.scroll-indicator {
+  position: absolute;
+
+  left: 50%;
+  bottom: 3rem;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  z-index: 5;
+}
+
+.scroll-text {
+  color: var(--text-muted);
+
+  font-size: var(--fs-xs);
+
+  letter-spacing: .35rem;
+
+  text-transform: uppercase;
+}
+
+.scroll-mouse {
+  width: 3rem;
+  height: 5rem;
+
+  display: flex;
+  justify-content: center;
+
+  border: 2px solid rgba(255, 255, 255, .18);
+  border-radius: var(--radius-full);
+}
+
+.scroll-wheel {
+  width: .45rem;
+  height: .9rem;
+
+  margin-top: .8rem;
+
+  border-radius: var(--radius-full);
+
+  background: var(--accent-green);
+
+  animation: wheel 2s infinite;
+}
+
+.scroll-arrow {
+  color: var(--accent-green);
+
+  font-size: 1.2rem;
+
+  animation: arrowBounce 2s infinite;
+}
+
+@keyframes wheel {
+
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  60% {
+    transform: translateY(1.6rem);
+    opacity: .2;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+}
+
+@keyframes arrowBounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(.6rem);
+  }
+
+}
+
+@media (max-width:768px) {
+
+  .scroll-indicator {
+    display: none;
+  }
+
+}

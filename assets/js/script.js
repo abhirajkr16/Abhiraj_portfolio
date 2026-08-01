@@ -1,0 +1,1 @@
+/* Monolithic script.js logic has been fully migrated into assets/js/core/ and assets/js/modules/ */

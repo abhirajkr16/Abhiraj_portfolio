@@ -1,0 +1,92 @@
+:root {
+  /* Colors */
+
+  --bg-primary: #121416;
+  --bg-secondary: #1a1d1f;
+  --bg-surface: #23272a;
+  --bg-glass: rgba(255, 255, 255, 0.04);
+
+  --text-primary: #f8fafc;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+
+  --accent-green: #6eff83;
+  --accent-orange: #ff8a2b;
+
+  --border-color: #2d3238;
+  --border-hover: #40464d;
+
+  --success: #6eff83;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+
+  /* Typography */
+
+  --font-primary: "Inter", sans-serif;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-black: 800;
+
+  --fs-xs: 1.2rem;
+  --fs-sm: 1.4rem;
+  --fs-md: 1.6rem;
+  --fs-lg: 1.8rem;
+  --fs-xl: 2rem;
+  --fs-2xl: 2.8rem;
+  --fs-3xl: 3.6rem;
+  --fs-4xl: 4.8rem;
+  --fs-5xl: 6rem;
+
+  /* Spacing */
+
+  --space-xs: 0.4rem;
+  --space-sm: 0.8rem;
+  --space-md: 1.6rem;
+  --space-lg: 2.4rem;
+  --space-xl: 3.2rem;
+  --space-2xl: 4.8rem;
+  --space-3xl: 6.4rem;
+  --space-4xl: 8rem;
+
+  /* Radius */
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 999px;
+
+  /* Shadow */
+
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 12px 30px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.35);
+
+  /* Blur */
+
+  --blur-sm: 8px;
+  --blur-md: 16px;
+  --blur-lg: 24px;
+
+  /* Transition */
+
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 350ms ease;
+  --transition-extra: 600ms ease;
+
+  /* Layout */
+
+  --container-width: 1280px;
+  --section-width: 1200px;
+
+  /* Layer */
+
+  --z-navbar: 1000;
+  --z-overlay: 1100;
+  --z-modal: 1200;
+  --z-tooltip: 1300;
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Portfolio Website",
+    "desc": "Personal Portfolio Website. Don't Need Much Info About It, Just Scroll Down. You're Here Only!",
+    "image": "portfolioweb",
+    "category": "basicweb",
+    "links": {
+      "view": "https://its-abhi-portfolio.netlify.app/",
+      "code": "https://github.com/decode16/Abhiraj-portfolio.git"
+    }
+  },
+  {
+    "name": "Apna website",
+    "desc": "Apna collage full website clone.Only frontend is here.",
+    "image": "apnaweb",
+    "category": "basicweb",
+    "links": {
+      "view": "https://apnawebsitewithoutresponsive.netlify.app/",
+      "code": "https://github.com/decode16/apna-collage-webpage.git"
+    }
+  },
+  {
+    "name": "7-Cylinder-Rotary Engine",
+    "desc": "Design a 7-cylinder rotyary engine using solidworks, blender. Blender is used for lighting, realistic texturing and rendering",
+    "image": "7mech1",
+    "category": "designing",
+    "links": {
+      "view": "https://www.instagram.com/p/DA8f5IdTE0s/?img_index=1",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Clutch Plate Assembly",
+    "desc": "Full assembly of mechanical fully functional clutch plate using solidworks.",
+    "image": "clutchmech",
+    "category": "designing",
+    "links": {
+      "view": "https://www.instagram.com/p/C_GAvA3vDml/?img_index=1",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Robotic Arm",
+    "desc": "Dsign a full assembly of Robotic arm using blender.also textur and lighten it using Blender",
+    "image": "roboticarm",
+    "category": "designing",
+    "links": {
+      "view": "https://www.instagram.com/p/DA8ivTmzyJH/?img_index=1",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Grenade",
+    "desc": "A high-detail 3D model of a grenade, meticulously crafted using SolidWorks for precision and Blender for realistic texturing and rendering.",
+    "image": "granade",
+    "category": "designing",
+    "links": {
+      "view": "https://www.instagram.com/p/DBAr1lRIeCC/?img_index=1",
+      "code": "#"
+    }
+  }
+]
