@@ -1,53 +1,99 @@
 [
-    {
-        "name": "HTML5",
-        "icon": "https://img.icons8.com/color/48/000000/html-5--v1.png"
-    },
-    {
-        "name": "CSS3",
-        "icon": "https://img.icons8.com/color/48/000000/css3.png"
-    },
-    {
+  {
+    "category": "Languages",
+    "skills": [
+      {
+        "name": "Java",
+        "icon": "./assets/images/skills/java.svg"
+      },
+      {
         "name": "JavaScript",
-        "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png"
-    },
-    {
-        "name": "Bootstrap",
-        "icon": "https://img.icons8.com/color/48/000000/bootstrap.png"
-    },
-    {
-        "name": "Sass",
-        "icon": "https://img.icons8.com/color/48/000000/sass.png"
-    },
-    {
-        "name": "Netlify",
-        "icon": "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/000000/external-netlify-a-cloud-computing-company-that-offers-hosting-and-serverless-backend-services-for-static-websites-logo-shadow-tal-revivo.png"
-    },
-
-    {
+        "icon": "./assets/images/skills/javascript.svg"
+      },
+      {
+        "name": "SQL",
+        "icon": "./assets/images/skills/sql.svg"
+      }
+    ]
+  },
+  {
+    "category": "Frontend",
+    "skills": [
+      {
+        "name": "HTML5",
+        "icon": "./assets/images/skills/html.svg"
+      },
+      {
+        "name": "CSS3",
+        "icon": "./assets/images/skills/css.svg"
+      },
+      {
+        "name": "React",
+        "icon": "./assets/images/skills/react.svg"
+      }
+    ]
+  },
+  {
+    "category": "Backend",
+    "skills": [
+      {
+        "name": "Node.js",
+        "icon": "./assets/images/skills/nodejs.svg"
+      },
+      {
+        "name": "Express.js",
+        "icon": "./assets/images/skills/express.svg"
+      },
+      {
+        "name": "REST API",
+        "icon": "./assets/images/skills/api.svg"
+      }
+    ]
+  },
+  {
+    "category": "Database",
+    "skills": [
+      {
+        "name": "MongoDB",
+        "icon": "./assets/images/skills/mongodb.svg"
+      },
+      {
+        "name": "MySQL",
+        "icon": "./assets/images/skills/mysql.svg"
+      },
+      {
+        "name": "Redis",
+        "icon": "./assets/images/skills/redis.svg"
+      }
+    ]
+  },
+  {
+    "category": "Tools",
+    "skills": [
+      {
+        "name": "Git",
+        "icon": "./assets/images/skills/git.svg"
+      },
+      {
         "name": "GitHub",
-        "icon": "https://img.icons8.com/glyph-neue/48/000000/github.png"
-    },
-
-    {
-        "name": "Autocad",
-        "icon": "https://img.icons8.com/color/48/000000/autocad.png"
-    },
-    {
-        "name": "Solidworks",
-        "icon": "https://img.icons8.com/color/48/000000/solidworks.png"
-    },
-    {
-        "name": "Blender",
-        "icon": "https://img.icons8.com/color/48/000000/blender-3d.png"
-    },
-    {
-        "name": "ReactJS(UC)",
-        "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png"
-    },
-    {
-        "name": "ExpressJS(UC)",
-        "icon": "https://img.icons8.com/fluency/48/000000/node-js.png"
-    }
-    
+        "icon": "./assets/images/skills/github.svg"
+      },
+      {
+        "name": "Docker",
+        "icon": "./assets/images/skills/docker.svg"
+      },
+      {
+        "name": "Postman",
+        "icon": "./assets/images/skills/postman.svg"
+      },
+      {
+        "name": "VS Code",
+        "icon": "./assets/images/skills/vscode.svg"
+      },
+      {
+        "name": "Intellij",
+        "icon": "./assets/images/skills/intellij.svg"
+      }
+    ]
+  }
 ]

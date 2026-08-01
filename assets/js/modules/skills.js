@@ -1,18 +1,54 @@
-/* ==========================================================================
-   Skills Component Module
-   ========================================================================== */
+function showSkills(data) {
 
-function showSkills(skills) {
-    let skillsContainer = document.getElementById("skillsContainer");
-    let skillHTML = "";
-    skills.forEach(skill => {
-        skillHTML += `
-        <div class="bar">
-              <div class="info">
-                <img src=${skill.icon} alt="skill" />
-                <span>${skill.name}</span>
-              </div>
-            </div>`
+  const container = document.getElementById("skillsContainer");
+
+  let html = "";
+
+  data.forEach(category => {
+
+    html += `
+
+            <div class="skill-category">
+
+                <h3 class="skill-category-title">
+                    ${category.category}
+                </h3>
+
+                <div class="skill-grid">
+
+        `;
+
+    category.skills.forEach(skill => {
+
+      html += `
+
+                <div class="skill-card">
+
+                    <img
+                        src="${skill.icon}"
+                        alt="${skill.name}"
+                    >
+
+                    <span>
+                        ${skill.name}
+                    </span>
+
+                </div>
+
+            `;
+
     });
-    skillsContainer.innerHTML = skillHTML;
+
+    html += `
+
+                </div>
+
+            </div>
+
+        `;
+
+  });
+
+  container.innerHTML = html;
+
 }
