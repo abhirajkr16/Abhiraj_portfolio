@@ -74,9 +74,9 @@
 .about-image img:hover {
   transform: translateY(-8px);
 
-  box-shadow:
+  /* box-shadow:
     0 20px 60px rgba(0, 0, 0, .4),
-    0 0 30px rgba(110, 255, 131, .12);
+    0 0 30px rgba(110, 255, 131, .12); */
 }
 
 /* Right */

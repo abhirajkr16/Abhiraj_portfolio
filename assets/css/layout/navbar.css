@@ -51,17 +51,16 @@
 }
 
 .logo-icon {
-  width: 4.4rem;
-  height: 4.4rem;
+  width: 5rem;
+  height: 5rem;
 
   display: grid;
   place-items: center;
 
-  border-radius: 50%;
 
-  background: rgba(110, 255, 131, 0.08);
+  /* background: rgba(110, 255, 131, 0.08); */
 
-  color: var(--accent-green);
+  /* color: var(--accent-green); */
 
   transition:
     transform var(--transition-normal),
@@ -69,12 +68,20 @@
     color var(--transition-normal);
 }
 
+.logo-icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  /* margin: 0;
+  padding: 0; */
+}
+
 .logo:hover .logo-icon {
   transform: rotate(-12deg);
 
-  background: var(--accent-green);
+  /* background: var(--accent-green); */
 
-  color: var(--bg-primary);
+  /* color: var(--bg-primary); */
 }
 
 .logo-text {
