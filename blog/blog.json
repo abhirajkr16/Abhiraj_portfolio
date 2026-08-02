@@ -1,0 +1,67 @@
+[
+  {
+    "featured": true,
+    "title": "Building a Distributed URL Shortener",
+    "category": "System Design",
+    "date": "Coming Soon",
+    "readTime": "12 min read",
+    "image": "portfolio.png",
+    "description": "A complete engineering walkthrough covering requirement analysis, API design, database schema, Redis caching, Docker, scalability, and deployment.",
+    "tags": [
+      "Node.js",
+      "Redis",
+      "MySQL",
+      "Docker",
+      "System Design"
+    ],
+    "link": "#"
+  },
+
+  {
+    "featured": false,
+    "title": "Redis Caching Explained",
+    "category": "Backend",
+    "date": "Coming Soon",
+    "readTime": "8 min read",
+    "image": "portfolio.png",
+    "description": "Learn how Redis improves application performance through caching, expiration strategies, and real-world backend use cases.",
+    "tags": [
+      "Redis",
+      "Caching",
+      "Node.js"
+    ],
+    "link": "#"
+  },
+
+  {
+    "featured": false,
+    "title": "Docker for MERN Developers",
+    "category": "DevOps",
+    "date": "Coming Soon",
+    "readTime": "10 min read",
+    "image": "portfolio.png",
+    "description": "Containerize your MERN applications using Docker, Docker Compose, and production-ready deployment practices.",
+    "tags": [
+      "Docker",
+      "Node.js",
+      "MongoDB"
+    ],
+    "link": "#"
+  },
+
+  {
+    "featured": false,
+    "title": "My MERN Stack Learning Journey",
+    "category": "Learning",
+    "date": "Coming Soon",
+    "readTime": "6 min read",
+    "image": "portfolio.png",
+    "description": "Lessons learned while transitioning from frontend development to full-stack engineering with the MERN ecosystem.",
+    "tags": [
+      "React",
+      "Express",
+      "MongoDB"
+    ],
+    "link": "#"
+  }
+]

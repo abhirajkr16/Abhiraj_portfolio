@@ -1,7 +1,4 @@
-/* App Bootstrap */
-
 $(document).ready(function () {
-    // Skills
 
     fetchData().then(data => {
 
@@ -10,8 +7,20 @@ $(document).ready(function () {
     });
 
     fetchData("projects").then(data => {
-        // Projects
+
         showProjects(data);
+
+    });
+
+    fetchData("experience").then(data => {
+
+        showExperience(data);
+
+    });
+
+    fetchData("blog").then(data => {
+
+        showBlogs(data);
 
     });
 

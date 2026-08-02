@@ -20,6 +20,7 @@
 @import url("./layout/footer.css");
 @import url("./layout/responsive.css");
 @import url("./layout/stats.css");
+@import url("./layout/blog.css");
 
 /* Component Styles */
 @import url("./components/buttons.css");

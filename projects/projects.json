@@ -66,25 +66,6 @@
   {
     "featured": false,
     "status": "Completed",
-    "title": "Farm Produce Management",
-    "subtitle": "Full Stack Application",
-    "description": "Farm produce management platform built using React, Node.js, Express and MySQL.",
-    "image": "portfolio.png",
-    "category": "Full Stack",
-    "technologies": [
-      "React",
-      "Node.js",
-      "Express",
-      "MySQL",
-      "JWT"
-    ],
-    "github": "YOUR_GITHUB",
-    "demo": ""
-  },
-
-  {
-    "featured": false,
-    "status": "Completed",
     "title": "TradeWise",
     "subtitle": "Frontend Clone",
     "description": "Responsive Zerodha landing page clone focused on modern UI and reusable components.",
