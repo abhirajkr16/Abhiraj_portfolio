@@ -5,34 +5,24 @@ async function fetchData(type = "skills") {
     switch (type) {
 
         case "skills":
-
-            path = "skills.json";
-
+            path = "./skills.json";
             break;
 
         case "projects":
-
-            path = "./projects/projects.json";
-
+            path = "./data/projects.json";
             break;
 
         case "experience":
-
-            path = "./experience/experience.json";
-
+            path = "./data/experience.json";
             break;
+
         case "blog":
-
-            path = "./blog/blog.json";
-
+            path = "./data/blog.json";
             break;
 
         default:
-
             console.error("Unknown data type:", type);
-
             return [];
-
     }
 
     const response = await fetch(path);

@@ -224,6 +224,40 @@
 
 }
 
+/* ==========================================================
+   Footer Social Icons
+========================================================== */
+
+.footer-socials {
+  margin-top: 2.5rem;
+}
+
+.footer-socials .social-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.4rem;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-socials .social-icons li {
+  margin: 0;
+}
+
+.footer-socials .social-icons li a {
+  width: 52px;
+  height: 52px;
+}
+
+.footer-socials .social-icons li a img {
+  width: 24px;
+  height: 24px;
+}
+
 /* ==========================
    Responsive
 ========================== */

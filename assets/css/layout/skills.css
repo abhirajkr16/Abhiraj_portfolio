@@ -1,10 +1,12 @@
 /* Skills */
 
+
 .skills {
   padding: 10rem 0;
 
   background: var(--bg-primary);
 }
+
 
 .skills .heading {
   margin-bottom: 7rem;

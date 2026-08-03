@@ -1,235 +1,238 @@
-function showProjects(projects) {
+let projects = [];
 
-  const featuredContainer = document.getElementById("featuredProject");
-  const projectsContainer = document.getElementById("projectsContainer");
+let currentProject = 0;
 
-  const featuredProject = projects.find(project => project.featured);
+async function loadProjects() {
 
-  const otherProjects = projects.filter(project => !project.featured);
+    try {
 
-  if (featuredProject) {
+        const response = await fetch("./data/projects.json")
 
-    featuredContainer.innerHTML = createFeaturedProject(featuredProject);
+        projects = await response.json();
 
-  }
+        renderProjects();
 
-  let html = "";
+    } catch (error) {
 
-  otherProjects.forEach(project => {
-
-    html += createProjectCard(project);
-
-  });
-
-  projectsContainer.innerHTML = html;
-
-}
-
-function createFeaturedProject(project) {
-
-  return `
-
-    <article class="featured-project">
-
-        <div class="featured-image">
-
-            <img
-                src="./assets/images/projects/${project.image}"
-                alt="${project.title}">
-
-        </div>
-
-        <div class="featured-content">
-
-            <span class="project-category">
-
-                ${project.category}
-
-            </span>
-
-            <h3>
-
-                ${project.title}
-
-            </h3>
-
-            <h4>
-
-                ${project.subtitle}
-
-            </h4>
-
-           <p>
-
-${project.description}
-
-</p>
-
-<div class="project-highlights">
-
-    <h5>
-
-        Highlights
-
-    </h5>
-
-    <ul>
-
-        ${project.highlights.map(item => `
-
-            <li>
-
-                <i class="fas fa-check-circle"></i>
-
-                ${item}
-
-            </li>
-
-        `).join("")}
-
-    </ul>
-
-</div>
-
-            <div class="project-tech">
-
-                ${project.technologies.map(technology => `
-
-                    <span>
-
-                        ${technology}
-
-                    </span>
-
-                `).join("")}
-
-            </div>
-
-            <div class="project-actions">
-
-                <a
-                    href="${project.github}"
-                    target="_blank"
-                    class="btn btn-secondary">
-
-                    <i class="fab fa-github"></i>
-
-                    GitHub
-
-                </a>
-
-                ${project.demo ?
-
-      `
-
-                <a
-                    href="${project.demo}"
-                    target="_blank"
-                    class="btn btn-primary">
-
-                    <i class="fas fa-arrow-up-right-from-square"></i>
-
-                    Live Demo
-
-                </a>
-
-                `
-
-      :
-
-      ""
+        console.error(error);
 
     }
 
-            </div>
+}
 
-        </div>
+function renderProjects() {
 
-    </article>
+    const track = document.getElementById("projectsTrack");
 
-    `;
+    const pagination = document.getElementById("projectsPagination");
+
+    track.innerHTML = projects
+        .map(project => createProject(project))
+        .join("");
+
+    pagination.innerHTML = projects
+        .map((project, index) =>
+
+            `
+            <button
+                class="pagination-dot ${index === 0 ? "active" : ""}"
+                data-index="${index}">
+            </button>
+            `
+
+        ).join("");
+
+    document.querySelectorAll(".pagination-dot").forEach(dot => {
+
+        dot.addEventListener("click", function () {
+
+            currentProject = Number(this.dataset.index);
+
+            updateSlider();
+
+        });
+
+    });
 
 }
 
-function createProjectCard(project) {
+function updateSlider() {
 
-  return `
+    const track = document.getElementById("projectsTrack");
+
+    track.style.transform = `translateX(-${currentProject * 100}%)`;
+
+    document.querySelectorAll(".pagination-dot").forEach((dot, index) => {
+
+        dot.classList.toggle("active", index === currentProject);
+
+    });
+
+}
+
+function createProject(project) {
+
+    return `
 
     <article class="project-card">
 
-        <div class="project-image">
+        <div class="project-header">
 
-            <img
-                src="./assets/images/projects/${project.image}"
-                alt="${project.title}">
+            <div class="project-badges">
 
-        </div>
+                <span class="project-status">
 
-        <div class="project-content">
+                    ${project.status}
 
-            <span class="project-category">
+                </span>
 
-                ${project.category}
+                <span class="project-type">
 
-            </span>
+                    ${project.type}
 
-            <h3>
+                </span>
+
+            </div>
+
+            <h2 class="project-title">
 
                 ${project.title}
 
+            </h2>
+
+            <h3 class="project-subtitle">
+
+                ${project.subtitle}
+
             </h3>
 
-            <p>
+            <p class="project-description">
 
                 ${project.description}
 
             </p>
 
-            <div class="project-tech">
+        </div>
 
-                ${project.technologies.slice(0, 4).map(technology => `
+        <div class="project-body">
 
-                    <span>
+            <div class="project-image">
 
-                        ${technology}
-
-                    </span>
-
-                `).join("")}
+                <img
+                    src="./assets/images/projects/${project.image}"
+                    alt="${project.title}">
 
             </div>
 
-            <div class="project-actions">
+            <div class="project-right">
 
-                <a
-                    href="${project.github}"
-                    target="_blank"
-                    class="btn btn-secondary">
+                <div class="project-section">
 
-                    GitHub
+                    <h5>
 
-                </a>
+                        Key Features
 
-                ${project.demo ?
+                    </h5>
 
-      `
+                    <div class="feature-grid">
 
-                <a
-                    href="${project.demo}"
-                    target="_blank"
-                    class="btn btn-primary">
+                        ${project.features.map(feature =>
 
-                    Demo
+        `
+                            <div class="feature-item">
 
-                </a>
+                                <i class="fas fa-check-circle"></i>
 
-                `
+                                <span>${feature}</span>
 
-      :
+                            </div>
+                            `
 
-      ""
+    ).join("")}
 
-    }
+                    </div>
+
+                </div>
+
+                <div class="project-section">
+
+                    <h5>
+
+                        Built With
+
+                    </h5>
+
+                    <div class="tech-grid">
+
+                        ${Object.entries(project.techStack).map(([category, technologies]) =>
+
+        `
+                            <div class="tech-column">
+
+                                <h6>
+
+                                    ${category}
+
+                                </h6>
+
+                                ${technologies.map(technology =>
+
+            `
+                                    <span>
+
+                                        ${technology}
+
+                                    </span>
+                                    `
+
+        ).join("")}
+
+                            </div>
+                            `
+
+    ).join("")}
+
+                    </div>
+
+                </div>
+
+                <div class="project-actions">
+
+                    <a
+                        href="${project.github}"
+                        target="_blank"
+                        class="btn btn-secondary">
+
+                        <i class="fab fa-github"></i>
+
+                        GitHub
+
+                    </a>
+
+                    ${project.demo !== "#"
+
+            ?
+
+            `
+                    <a
+                        href="${project.demo}"
+                        target="_blank"
+                        class="btn btn-primary">
+
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+
+                        Live Demo
+
+                    </a>
+                    `
+
+            :
+
+            ""
+
+        }
+
+                </div>
 
             </div>
 
@@ -240,3 +243,5 @@ function createProjectCard(project) {
     `;
 
 }
+
+loadProjects();

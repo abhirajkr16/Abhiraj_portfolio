@@ -45,11 +45,6 @@
 
   </div>
 
-  <!-- Preloader -->
-  <!-- <div class="loader-container">
-  <img draggable="false" src="./assets/images/preloader.gif" alt="">
-</div> -->
-
   <!-- Navbar -->
 
   <header class="header">
@@ -110,9 +105,7 @@
 
       <div class="nav-actions">
 
-        <a href="./assets/resume/Abhiraj-Kumar-Resume.pdf" class="btn btn-primary nav-resume" download>
-          Resume
-        </a>
+        <a href="./assets/images/experience/resume.pdf" target="_blank" class="btn btn-primary nav-resume">Resume</a>
 
         <button id="menu" class="fas fa-bars" type="button" aria-label="Open Navigation">
         </button>
@@ -122,7 +115,6 @@
     </div>
 
   </header>
-
   <section class="home" id="home">
 
     <div id="particles-js"></div>
@@ -147,9 +139,8 @@
 
         <p class="hero-description">
 
-          Computer Science student passionate about backend
-          development, scalable systems, and solving real-world
-          problems through clean, modern software engineering.
+          Building scalable backend systems and full-stack applications
+          with clean architecture, modern technologies, and real-world impact.
 
         </p>
 
@@ -178,7 +169,8 @@
           <ul class="social-icons">
 
             <li>
-              <a href="YOUR_LINKEDIN_URL" class="linkedin" target="_blank" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/abhirajkr16/" class="linkedin" target="_blank"
+                data-tooltip="LinkedIn" aria-label="LinkedIn">
 
                 <i class="fab fa-linkedin-in"></i>
 
@@ -186,7 +178,8 @@
             </li>
 
             <li>
-              <a href="YOUR_GITHUB_URL" class="github" target="_blank" aria-label="GitHub">
+              <a href="https://github.com/abhirajkr16" class="github" target="_blank" data-tooltip="GitHub"
+                aria-label="GitHub">
 
                 <i class="fab fa-github"></i>
 
@@ -194,7 +187,8 @@
             </li>
 
             <li>
-              <a href="YOUR_LEETCODE_URL" class="leetcode" target="_blank" aria-label="LeetCode">
+              <a href="https://leetcode.com/u/abhirajkr16/" class="leetcode" target="_blank" data-tooltip="LeetCode"
+                aria-label="LeetCode">
 
                 <img src="./assets/images/skills/leetcode.png" alt="LeetCode">
 
@@ -202,46 +196,25 @@
             </li>
 
             <li>
-              <a href="YOUR_GFG_URL" class="gfg" target="_blank" aria-label="GeeksforGeeks">
+              <a href="https://www.geeksforgeeks.org/profile/abhirajeawp?tab=activity" class="gfg" target="_blank"
+                data-tooltip="GFG" aria-label="GeeksforGeeks">
 
                 <img src="./assets/images/skills/gfg.png" alt="GeeksforGeeks">
 
               </a>
             </li>
-
-            <li>
-              <a href="YOUR_VERCEL_URL" class="vercel" target="_blank" aria-label="Vercel">
-
-                <img src="./assets/images/skills/vercel.png" alt="Vercel">
-
-              </a>
-            </li>
-
-            <li>
-              <a href="mailto:YOUR_EMAIL@gmail.com" class="email" aria-label="Email">
-
-                <i class="fas fa-envelope"></i>
-
-              </a>
-            </li>
-
           </ul>
 
         </div>
 
       </div>
-
       <div class="hero-image">
 
-        <span class="shape"></span>
+        <div class="hero-glow"></div>
 
-        <span class="shape"></span>
+        <div class="hero-image-frame">
 
-        <span class="shape"></span>
-
-        <div class="hero-image-wrapper">
-
-          <img class="tilt" src="./assets/images/heropage_img.png" alt="Abhiraj Kumar">
+          <img src="./assets/images/last.png" alt="Abhiraj Kumar" class="hero-photo tilt">
 
         </div>
 
@@ -288,7 +261,7 @@
 
       <div class="about-image">
 
-        <img src="./assets/images/heropage3.png" alt="Abhiraj Kumar" class="tilt">
+        <img src="./assets/images/heroimg4.png" alt="Abhiraj Kumar" class="tilt">
 
       </div>
 
@@ -325,7 +298,7 @@
 
             <span>Email</span>
 
-            <p>abhirajkrbnk05k@gmail.com</p>
+            <p>abhirajmait16@gmail.com</p>
 
           </div>
 
@@ -411,6 +384,7 @@
 
   <!-- Skills -->
   <section class="skills" id="skills">
+
 
     <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
 
@@ -606,45 +580,29 @@
     <div class="section-heading">
 
       <span class="section-tag">
-
         Portfolio
-
       </span>
 
       <h2 class="section-title">
-
         Selected Work
-
       </h2>
 
       <p class="section-description">
-
         Projects focused on backend engineering, full-stack development,
         distributed systems and AI.
-
       </p>
 
     </div>
 
-    <!-- Featured Project -->
+    <div class="projects-slider">
 
-    <div class="featured-project-container" id="featuredProject">
+      <div class="projects-track" id="projectsTrack">
+
+      </div>
 
     </div>
 
-    <!-- Other Projects -->
-
-    <div class="projects-wrapper">
-
-      <h3 class="projects-subtitle">
-
-        More Projects
-
-      </h3>
-
-      <div class="projects-grid" id="projectsContainer">
-
-      </div>
+    <div class="projects-pagination" id="projectsPagination">
 
     </div>
 
@@ -690,38 +648,42 @@
     <div class="section-heading">
 
       <span class="section-tag">
+
         Blog
+
       </span>
 
       <h2 class="section-title">
+
         Latest Articles
+
       </h2>
 
       <p class="section-description">
+
         Engineering notes, backend development, system design and AI.
+
       </p>
 
     </div>
 
-    <div class="blog-grid" id="blogContainer">
+    <div class="blog-slider">
+
+      <div class="blog-track" id="blogTrack">
+
+      </div>
 
     </div>
 
-    <div class="blog-footer">
-
-      <a href="/blog" class="btn btn-secondary">
-
-        View All Articles
-
-      </a>
+    <div class="slider-pagination" id="blogPagination">
 
     </div>
 
   </section>
 
-  <!-- =========================
-     Contact Section
-========================= -->
+
+  <!-- Contact Section -->
+
 
   <section class="contact" id="contact">
 
@@ -785,55 +747,61 @@
 
         </div>
 
-        <div class="contact-card">
+        <a href="./assets/images/experience/resume.pdf" download class="resume-download-btn">
 
-          <i class="fas fa-file-download"></i>
+          <i class="fas fa-download"></i>
 
-          <div>
+          <span>Download Resume</span>
 
-            <h4>Resume</h4>
+        </a>
 
-            <a href="./assets/resume/Abhiraj-Kumar-Resume.pdf" download>
+        <div class="hero-socials contact-socials">
 
-              Download Resume
+          <ul class="social-icons">
 
-            </a>
+            <li>
+              <a href="https://github.com/abhirajkr16" target="_blank" data-tooltip="GitHub" aria-label="GitHub">
 
-          </div>
+                <i class="fab fa-github"></i>
 
-        </div>
+              </a>
+            </li>
 
-        <div class="contact-socials">
+            <li>
+              <a href="https://www.linkedin.com/in/abhirajkr16/" target="_blank" data-tooltip="LinkedIn"
+                aria-label="LinkedIn">
 
-          <a href="YOUR_GITHUB">
+                <i class="fab fa-linkedin-in"></i>
 
-            <i class="fab fa-github"></i>
+              </a>
+            </li>
 
-          </a>
+            <li>
+              <a href="https://leetcode.com/u/abhirajkr16/" target="_blank" data-tooltip="LeetCode"
+                aria-label="LeetCode">
 
-          <a href="YOUR_LINKEDIN">
+                <img src="./assets/images/skills/leetcode.png" alt="LeetCode">
 
-            <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
 
-          </a>
+            <li>
+              <a href="https://www.geeksforgeeks.org/profile/abhirajeawp?tab=activity" target="_blank"
+                data-tooltip="GFG" aria-label="GeeksforGeeks">
 
-          <a href="YOUR_LEETCODE">
+                <img src="./assets/images/skills/gfg.png" alt="GeeksforGeeks">
 
-            <img src="./assets/images/skills/leetcode.png">
+              </a>
+            </li>
 
-          </a>
+            <li>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=abhirajmait16@gmail.com&su=Hello%20Abhiraj&body=I%20would%20like%20to%20connect"
+                target="_blank" data-tooltip="Email" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
 
-          <a href="YOUR_GFG">
-
-            <img src="./assets/images/skills/gfg.png">
-
-          </a>
-
-          <a href="mailto:abhirajkrbnk05@gmail.com">
-
-            <i class="fas fa-envelope"></i>
-
-          </a>
+          </ul>
 
         </div>
 
@@ -841,11 +809,11 @@
 
       <!-- RIGHT -->
 
-      <form class="contact-form" id="contact-form">
+      <form id="contact-form" class="contact-form">
 
         <div class="form-group">
 
-          <input type="text" id="name" required>
+          <input type="text" id="name" name="from_name" required>
 
           <label>
 
@@ -857,7 +825,7 @@
 
         <div class="form-group">
 
-          <input type="email" id="email" required>
+          <input type="email" id="email" name="from_email" required>
 
           <label>
 
@@ -869,7 +837,7 @@
 
         <div class="form-group">
 
-          <input type="text" id="subject" required>
+          <input type="text" id="subject" name="subject" required>
 
           <label>
 
@@ -881,9 +849,7 @@
 
         <div class="form-group">
 
-          <textarea id="message" rows="6" required>
-
-                </textarea>
+          <textarea id="message" name="message" rows="3" required></textarea>
 
           <label>
 
@@ -1020,37 +986,55 @@
 
         </h3>
 
-        <div class="footer-socials">
+        <div class="footer-socials hero-socials">
 
-          <a href="YOUR_GITHUB">
+          <ul class="social-icons">
 
-            <i class="fab fa-github"></i>
+            <li>
+              <a href="https://github.com/abhirajkr16" target="_blank" data-tooltip="GitHub" aria-label="GitHub">
 
-          </a>
+                <i class="fab fa-github"></i>
 
-          <a href="YOUR_LINKEDIN">
+              </a>
+            </li>
 
-            <i class="fab fa-linkedin"></i>
+            <li>
+              <a href="https://www.linkedin.com/in/abhirajkr16/" target="_blank" data-tooltip="LinkedIn"
+                aria-label="LinkedIn">
 
-          </a>
+                <i class="fab fa-linkedin-in"></i>
 
-          <a href="YOUR_LEETCODE">
+              </a>
+            </li>
 
-            <img src="./assets/images/skills/leetcode.png" alt="LeetCode">
+            <li>
+              <a href="https://leetcode.com/u/abhirajkr16/" target="_blank" data-tooltip="LeetCode"
+                aria-label="LeetCode">
 
-          </a>
+                <img src="./assets/images/skills/leetcode.png" alt="LeetCode">
 
-          <a href="YOUR_GFG">
+              </a>
+            </li>
 
-            <img src="./assets/images/skills/gfg.png" alt="GeeksforGeeks">
+            <li>
+              <a href="https://www.geeksforgeeks.org/profile/abhirajeawp?tab=activity" target="_blank"
+                data-tooltip="GeeksforGeeks" aria-label="GeeksforGeeks">
 
-          </a>
+                <img src="./assets/images/skills/gfg.png" alt="GeeksforGeeks">
 
-          <a href="mailto:abhirajkrbnk05@gmail.com">
+              </a>
+            </li>
 
-            <i class="fas fa-envelope"></i>
+            <li>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=abhirajmait16@gmail.com&su=Hello%20Abhiraj&body=I%20would%20like%20to%20connect"
+                target="_blank" data-tooltip="Email" aria-label="Email">
 
-          </a>
+                <i class="fas fa-envelope"></i>
+
+              </a>
+            </li>
+
+          </ul>
 
         </div>
 
@@ -1093,6 +1077,8 @@
 
   <!-- Particles.js -->
   <script src="./assets/js/vendor/particles.min.js"></script>
+  <!-- email js -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
   <!-- Vanilla Tilt.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"
@@ -1102,7 +1088,6 @@
   <!-- Scroll Reveal -->
   <script src="https://unpkg.com/scrollreveal"></script>
 
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
   <!-- Modular Scripts -->
 
@@ -1119,7 +1104,7 @@
 
   <script src="./assets/js/modules/home.js"></script>
   <script src="./assets/js/modules/blog.js"></script>
-
+  <script src="./assets/js/modules/contact.js"></script>
   <script src="./assets/js/core/common.js"></script>
 
   <script src="./assets/js/core/app.js"></script>

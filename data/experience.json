@@ -1,0 +1,51 @@
+[
+    {
+        "status": "Completed",
+        "role": "Software Developer Intern",
+        "company": "Navigate Skill",
+        "logo": "navigateskill.png",
+        "duration": "June 2026 – July 2026",
+        "location": "Delhi, India",
+        "description": "Worked as a Full-Stack Website Developer Intern, contributing to modern web applications, cloud infrastructure, and scalable frontend/backend development while collaborating with the engineering team.",
+        "highlights": [
+            "Developed responsive web applications using React and Next.js",
+            "Worked with TypeScript, Tailwind CSS and modern JavaScript",
+            "Maintained and tested scalable frontend modules",
+            "Collaborated using Git-based development workflow",
+            "Contributed to cloud-based application development using AWS"
+        ],
+        "technologies": [
+            "React",
+            "Next.js",
+            "TypeScript",
+            "JavaScript",
+            "Tailwind CSS",
+            "AWS",
+            "Git"
+        ]
+    },
+    {
+        "status": "Certified",
+        "role": "Web Development Trainee",
+        "company": "YHills",
+        "logo": "yhills.jpeg",
+        "duration": "September 2024 – November 2024",
+        "location": "Remote",
+        "description": "Successfully completed a Web Development training program focused on frontend and backend web technologies while building practical projects and strengthening software development fundamentals.",
+        "highlights": [
+            "Completed professional Web Development training",
+            "Built responsive websites using HTML, CSS and JavaScript",
+            "Learned frontend development fundamentals",
+            "Worked on real-world practice projects",
+            "Earned course completion certificate"
+        ],
+        "technologies": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Bootstrap",
+            "Git",
+            "Responsive Design"
+        ]
+    }
+]

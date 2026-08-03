@@ -5,7 +5,7 @@
     "category": "System Design",
     "date": "Coming Soon",
     "readTime": "12 min read",
-    "image": "portfolio.png",
+    "image": "urlshortener.png",
     "description": "A complete engineering walkthrough covering requirement analysis, API design, database schema, Redis caching, Docker, scalability, and deployment.",
     "tags": [
       "Node.js",
@@ -16,7 +16,6 @@
     ],
     "link": "#"
   },
-
   {
     "featured": false,
     "title": "Redis Caching Explained",
@@ -32,7 +31,6 @@
     ],
     "link": "#"
   },
-
   {
     "featured": false,
     "title": "Docker for MERN Developers",
@@ -48,7 +46,6 @@
     ],
     "link": "#"
   },
-
   {
     "featured": false,
     "title": "My MERN Stack Learning Journey",

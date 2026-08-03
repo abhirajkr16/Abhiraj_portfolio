@@ -1,92 +1,163 @@
-/* ==========================================================================
-   Blog Module
-   ========================================================================== */
+let blogs = [];
 
-function showBlogs(blogs) {
+let currentBlog = 0;
 
-    const container = document.getElementById("blogContainer");
+async function loadBlogs() {
 
-    if (!container) return;
+    try {
 
-    let html = "";
+        const response = await fetch("./data/blog.json");
 
-    blogs.forEach(blog => {
+        blogs = await response.json();
 
-        html += `
-        <article class="blog-card">
+        renderBlogs();
 
-            <div class="blog-image">
+    }
 
-                <img
-                    src="./assets/images/blog/${blog.image}"
-                    alt="${blog.title}">
+    catch (error) {
 
-            </div>
+        console.error(error);
 
-            <div class="blog-content">
+    }
 
-                <span class="blog-category">
+}
 
-                    ${blog.category}
+function renderBlogs() {
 
-                </span>
+    const track = document.getElementById("blogTrack");
 
-                <h3>
+    const pagination = document.getElementById("blogPagination");
 
-                    ${blog.title}
+    if (!track || !pagination) return;
 
-                </h3>
+    track.innerHTML = blogs
+        .map(blog => createBlogCard(blog))
+        .join("");
 
-                <p>
+    pagination.innerHTML = blogs
+        .map((blog, index) =>
 
-                    ${blog.description}
+            `
+            <button
+                class="${index === 0 ? "active" : ""}"
+                data-index="${index}">
+            </button>
+            `
 
-                </p>
+        ).join("");
 
-                <div class="blog-meta">
+    document.querySelectorAll("#blogPagination button").forEach(button => {
 
-                    <span>
+        button.addEventListener("click", function () {
 
-                        <i class="far fa-calendar"></i>
+            currentBlog = Number(this.dataset.index);
 
-                        ${blog.date}
+            updateBlogSlider();
 
-                    </span>
-
-                    <span>
-
-                        <i class="far fa-clock"></i>
-
-                        ${blog.readTime}
-
-                    </span>
-
-                </div>
-
-                <div class="blog-tags">
-
-                    ${blog.tags.map(tag => `
-                        <span>${tag}</span>
-                    `).join("")}
-
-                </div>
-
-                <a
-                    href="${blog.link}"
-                    class="btn btn-secondary">
-
-                  
-                    Comming Soon
-
-                </a>
-
-            </div>
-
-        </article>
-        `;
+        });
 
     });
 
-    container.innerHTML = html;
+}
+
+function updateBlogSlider() {
+
+    const track = document.getElementById("blogTrack");
+
+    track.style.transform = `translateX(-${currentBlog * 100}%)`;
+
+    document
+        .querySelectorAll("#blogPagination button")
+        .forEach((button, index) => {
+
+            button.classList.toggle("active", index === currentBlog);
+
+        });
 
 }
+
+function createBlogCard(blog) {
+
+    return `
+
+    <article class="blog-card">
+
+        <div class="blog-image">
+
+            <img
+                src="./assets/images/projects/${blog.image}"
+                alt="${blog.title}">
+
+        </div>
+
+        <div class="blog-content">
+
+            <span class="blog-category">
+
+                ${blog.category}
+
+            </span>
+
+            <h3>
+
+                ${blog.title}
+
+            </h3>
+
+            <p>
+
+                ${blog.description}
+
+            </p>
+
+            <div class="blog-meta">
+
+                <span>
+
+                    <i class="far fa-calendar"></i>
+
+                    ${blog.date}
+
+                </span>
+
+                <span>
+
+                    <i class="far fa-clock"></i>
+
+                    ${blog.readTime}
+
+                </span>
+
+            </div>
+
+            <div class="blog-tags">
+
+                ${blog.tags.map(tag => `
+
+                    <span>
+
+                        ${tag}
+
+                    </span>
+
+                `).join("")}
+
+            </div>
+
+            <a
+                href="${blog.link}"
+                class="btn btn-secondary">
+
+                Coming Soon
+
+            </a>
+
+        </div>
+
+    </article>
+
+    `;
+
+}
+
+loadBlogs();

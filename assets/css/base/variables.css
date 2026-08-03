@@ -1,7 +1,9 @@
 :root {
   /* Colors */
 
-  --bg-primary: #121416;
+  /* --bg-primary: #121416; */
+  --bg-primary: #0c0d0f;
+
   --bg-secondary: #1a1d1f;
   --bg-surface: #23272a;
   --bg-glass: rgba(255, 255, 255, 0.04);

@@ -6,11 +6,7 @@ $(document).ready(function () {
 
     });
 
-    fetchData("projects").then(data => {
 
-        showProjects(data);
-
-    });
 
     fetchData("experience").then(data => {
 
@@ -18,10 +14,6 @@ $(document).ready(function () {
 
     });
 
-    fetchData("blog").then(data => {
 
-        showBlogs(data);
-
-    });
 
 });

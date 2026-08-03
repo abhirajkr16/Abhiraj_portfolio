@@ -1,0 +1,163 @@
+[
+  {
+    "status": "Completed",
+    "type": "Full Stack",
+    "title": "URL Shortener",
+    "subtitle": "Backend System Design Project",
+    "description": "Production-inspired URL shortening platform built using React, Node.js, Express.js, MySQL, Redis and Docker featuring JWT authentication, custom aliases, analytics dashboard and scalable architecture.",
+    "image": "urlshortener.png",
+    "features": [
+      "JWT Authentication",
+      "Redis Caching",
+      "Analytics Dashboard",
+      "REST APIs",
+      "Dockerized",
+      "MVC Architecture"
+    ],
+    "techStack": {
+      "Frontend": [
+        "React",
+        "HTML5",
+        "CSS3",
+        "JavaScript"
+      ],
+      "Backend": [
+        "Node.js",
+        "Express.js",
+        "JWT",
+        "REST API"
+      ],
+      "Database": [
+        "MySQL",
+        "Redis"
+      ],
+      "DevOps": [
+        "Docker",
+        "Git"
+      ]
+    },
+    "github": "https://github.com/abhirajkr16/URL-Shortner",
+    "demo": "https://github.com/abhirajkr16/URL-Shortner"
+  },
+  {
+    "status": "Completed",
+    "type": "Frontend",
+    "title": "Developer Portfolio",
+    "subtitle": "Modern Personal Portfolio",
+    "description": "Premium developer portfolio built using HTML5, CSS3 and Vanilla JavaScript featuring modular architecture, JSON-driven components, particle animations, glassmorphism UI and responsive design.",
+    "image": "portfolio.png",
+    "features": [
+      "Responsive Design",
+      "Glassmorphism UI",
+      "Particles.js",
+      "Typed.js",
+      "ScrollReveal",
+      "JSON Driven"
+    ],
+    "techStack": {
+      "Frontend": [
+        "HTML5",
+        "CSS3",
+        "JavaScript"
+      ],
+      "Libraries": [
+        "Particles.js",
+        "Typed.js",
+        "ScrollReveal"
+      ],
+      "Architecture": [
+        "JSON",
+        "Modular CSS"
+      ],
+      "Tools": [
+        "Git",
+        "GitHub"
+      ]
+    },
+    "github": "https://github.com/abhirajkr16/Abhiraj_portfolio",
+    "demo": "https://github.com/abhirajkr16/Abhiraj_portfolio"
+  },
+  {
+    "status": "Completed",
+    "type": "Full Stack",
+    "title": "TradeWise",
+    "subtitle": "Stock Trading Platform",
+    "description": "Full-stack stock trading platform inspired by Zerodha featuring authentication, portfolio management, watchlists, analytics dashboard, REST APIs and cloud deployment.",
+    "image": "tradewise.png",
+    "features": [
+      "JWT Authentication",
+      "Portfolio Dashboard",
+      "Watchlist",
+      "Chart.js",
+      "Live Market APIs",
+      "AWS Deployment"
+    ],
+    "techStack": {
+      "Frontend": [
+        "React",
+        "HTML5",
+        "CSS3",
+        "JavaScript"
+      ],
+      "Backend": [
+        "Node.js",
+        "Express.js",
+        "REST API"
+      ],
+      "Database": [
+        "MongoDB",
+        "Mongoose"
+      ],
+      "Tools": [
+        "Chart.js",
+        "JWT",
+        "AWS",
+        "Git"
+      ]
+    },
+    "github": "https://github.com/abhirajkr16/TradeWise",
+    "demo": "https://github.com/abhirajkr16/TradeWise"
+  },
+  {
+    "status": "In Progress",
+    "type": "AI + Full Stack",
+    "title": "OrbitMinds",
+    "subtitle": "AI-Powered Precision Agriculture",
+    "description": "AI-powered agriculture platform using satellite imagery, Google Earth Engine and machine learning to detect crop type, moisture stress and generate intelligent irrigation recommendations.",
+    "image": "orbitminds.png",
+    "features": [
+      "Satellite Analysis",
+      "Crop Detection",
+      "Moisture Monitoring",
+      "AI Irrigation",
+      "LLM Assistant",
+      "Interactive Dashboard"
+    ],
+    "techStack": {
+      "Frontend": [
+        "React",
+        "HTML5",
+        "CSS3",
+        "JavaScript"
+      ],
+      "Backend": [
+        "Node.js",
+        "Express.js",
+        "Python",
+        "Flask"
+      ],
+      "AI": [
+        "Machine Learning",
+        "Google Earth Engine",
+        "LLM API"
+      ],
+      "Tools": [
+        "MongoDB",
+        "Docker",
+        "Git"
+      ]
+    },
+    "github": "#",
+    "demo": "#"
+  }
+]

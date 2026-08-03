@@ -7,7 +7,7 @@
 .social-icons {
   display: flex;
   align-items: center;
-  gap: 1.6rem;
+  gap: 2.4rem;
 
   padding: 0;
   margin: 0;
@@ -22,8 +22,8 @@
 .social-icons a {
   position: relative;
 
-  width: 5.2rem;
-  height: 5.2rem;
+  width: 5rem;
+  height: 5rem;
 
   display: flex;
   align-items: center;
@@ -38,7 +38,7 @@
 
   color: var(--text-primary);
 
-  overflow: hidden;
+  overflow: visible;
 
   transition:
     transform var(--transition-normal),
@@ -55,6 +55,7 @@
   inset: 0;
 
   border-radius: inherit;
+  pointer-events: none;
 
   background: radial-gradient(circle,
       rgba(110, 255, 131, 0.25),
@@ -66,15 +67,17 @@
 }
 
 .social-icons a:hover {
-  transform: translateY(-6px);
+
+  transform: translateY(-5px) scale(.9);
 
   color: var(--accent-green);
 
-  border-color: rgba(110, 255, 131, 0.45);
+  border-color: rgba(110, 255, 131, .45);
 
   box-shadow:
-    0 0 24px rgba(110, 255, 131, 0.18),
-    var(--shadow-sm);
+    0 0 25px rgba(110, 255, 131, .18),
+    0 15px 35px rgba(0, 0, 0, .25);
+
 }
 
 .social-icons a:hover::before {
@@ -118,5 +121,58 @@
     justify-content: center;
     flex-wrap: wrap;
   }
+
+}
+
+
+/* Social Tooltip */
+
+.social-icons a::after {
+
+  content: attr(data-tooltip);
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: calc(100% + 10px);
+
+  transform: translateX(-50%) translateY(10px);
+
+  background: #1c1e22;
+
+  color: #fff;
+
+  padding: .5rem 1rem;
+
+  border-radius: 999px;
+
+  border: 1px solid rgba(110, 255, 131, .35);
+
+  font-size: 1.1rem;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition: .3s ease;
+
+  z-index: 999;
+
+  pointer-events: none;
+
+}
+
+.social-icons a:hover::after {
+
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateX(-50%) translateY(0);
 
 }

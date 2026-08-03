@@ -77,13 +77,13 @@ particlesJS("particles-js", {
 
       enable: true,
 
-      distance: 160,
+      distance: 150,
 
       color: "#6eff83",
 
-      opacity: 0.08,
+      opacity: 0.3,
 
-      width: 1
+      width: 2
 
     },
 
@@ -91,7 +91,7 @@ particlesJS("particles-js", {
 
       enable: true,
 
-      speed: 1.4,
+      speed: 2,
 
       direction: "none",
 
