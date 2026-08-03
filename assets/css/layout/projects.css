@@ -371,6 +371,11 @@
 
   }
 
+  .section-description {
+    text-align: center;
+    font-size: 13px;
+  }
+
   .feature-grid {
 
     grid-template-columns: 1fr;

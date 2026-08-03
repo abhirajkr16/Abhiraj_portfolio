@@ -278,8 +278,20 @@
 
     .blog {
 
-        padding: 8rem 0;
+        padding: 2rem 0;
 
+    }
+
+    .section-description {
+        text-align: center;
+        font-size: 13px;
+        padding-top: 10px;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
     }
 
     .blog-content h3 {
