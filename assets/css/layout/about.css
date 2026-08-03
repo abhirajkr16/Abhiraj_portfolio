@@ -209,8 +209,7 @@
   }
 
   .about-image img {
-    display: none;
-    /* max-width: 30rem; */
+    max-width: 30rem;
   }
 
 }
