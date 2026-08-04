@@ -122,15 +122,14 @@ function initializeBlogSwipe() {
 
         if (Math.abs(distance) < swipeThreshold) return;
 
-        if (distance > 0 && currentBlog < blogs.length - 1) {
+        if (distance > 0) {
 
-            currentBlog++;
+            currentBlog = (currentBlog + 1) % blogs.length;
 
-        }
+        } else {
 
-        else if (distance < 0 && currentBlog > 0) {
-
-            currentBlog--;
+            currentBlog =
+                (currentBlog - 1 + blogs.length) % blogs.length;
 
         }
 

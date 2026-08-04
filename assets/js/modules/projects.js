@@ -113,13 +113,14 @@ function initializeProjectSwipe() {
 
         if (Math.abs(distance) < swipeThreshold) return;
 
-        if (distance > 0 && currentProject < projects.length - 1) {
+        if (distance > 0) {
 
-            currentProject++;
+            currentProject = (currentProject + 1) % projects.length;
 
-        } else if (distance < 0 && currentProject > 0) {
+        } else {
 
-            currentProject--;
+            currentProject =
+                (currentProject - 1 + projects.length) % projects.length;
 
         }
 
