@@ -2,6 +2,11 @@ let projects = [];
 
 let currentProject = 0;
 
+let startX = 0;
+let endX = 0;
+
+const swipeThreshold = 60;
+
 async function loadProjects() {
 
     try {
@@ -11,6 +16,8 @@ async function loadProjects() {
         projects = await response.json();
 
         renderProjects();
+
+        initializeProjectSwipe();
 
     } catch (error) {
 
@@ -27,7 +34,7 @@ function renderProjects() {
     const pagination = document.getElementById("projectsPagination");
 
     track.innerHTML = projects
-        .map(project => createProject(project))
+        .map(project => `<div class="project-slide">${createProject(project)}</div>`)
         .join("");
 
     pagination.innerHTML = projects
@@ -53,12 +60,25 @@ function renderProjects() {
         });
 
     });
+    updateSlider(false);
 
 }
 
-function updateSlider() {
+function updateSlider(animate = true) {
 
     const track = document.getElementById("projectsTrack");
+
+    if (!track) return;
+
+    if (animate) {
+
+        track.classList.remove("project-track-animate");
+
+        void track.offsetWidth;
+
+        track.classList.add("project-track-animate");
+
+    }
 
     track.style.transform = `translateX(-${currentProject * 100}%)`;
 
@@ -69,7 +89,48 @@ function updateSlider() {
     });
 
 }
+function initializeProjectSwipe() {
 
+    const track = document.getElementById("projectsTrack");
+
+    if (!track) return;
+
+    track.addEventListener("touchstart", (e) => {
+
+        startX = e.touches[0].clientX;
+
+    });
+
+    track.addEventListener("touchmove", (e) => {
+
+        endX = e.touches[0].clientX;
+
+    });
+
+    track.addEventListener("touchend", () => {
+
+        const distance = startX - endX;
+
+        if (Math.abs(distance) < swipeThreshold) return;
+
+        if (distance > 0 && currentProject < projects.length - 1) {
+
+            currentProject++;
+
+        } else if (distance < 0 && currentProject > 0) {
+
+            currentProject--;
+
+        }
+
+        updateSlider();
+
+        startX = 0;
+        endX = 0;
+
+    });
+
+}
 function createProject(project) {
 
     return `

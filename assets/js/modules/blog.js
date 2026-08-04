@@ -1,6 +1,10 @@
 let blogs = [];
-
 let currentBlog = 0;
+
+let blogStartX = 0;
+let blogEndX = 0;
+
+const blogSwipeThreshold = 60;
 
 async function loadBlogs() {
 
@@ -11,6 +15,8 @@ async function loadBlogs() {
         blogs = await response.json();
 
         renderBlogs();
+
+        initializeBlogSwipe();
 
     }
 
@@ -31,7 +37,11 @@ function renderBlogs() {
     if (!track || !pagination) return;
 
     track.innerHTML = blogs
-        .map(blog => createBlogCard(blog))
+        .map(blog => `
+        <div class="blog-slide">
+            ${createBlogCard(blog)}
+        </div>
+    `)
         .join("");
 
     pagination.innerHTML = blogs
@@ -57,12 +67,25 @@ function renderBlogs() {
         });
 
     });
+    updateBlogSlider(false);
 
 }
 
-function updateBlogSlider() {
+function updateBlogSlider(animate = true) {
 
     const track = document.getElementById("blogTrack");
+
+    if (!track) return;
+
+    if (animate) {
+
+        track.classList.remove("blog-track-animate");
+
+        void track.offsetWidth;
+
+        track.classList.add("blog-track-animate");
+
+    }
 
     track.style.transform = `translateX(-${currentBlog * 100}%)`;
 
@@ -75,7 +98,50 @@ function updateBlogSlider() {
         });
 
 }
+function initializeBlogSwipe() {
 
+    const track = document.getElementById("blogTrack");
+
+    if (!track) return;
+
+    track.addEventListener("touchstart", (e) => {
+
+        blogStartX = e.touches[0].clientX;
+
+    });
+
+    track.addEventListener("touchmove", (e) => {
+
+        blogEndX = e.touches[0].clientX;
+
+    });
+
+    track.addEventListener("touchend", () => {
+
+        const distance = blogStartX - blogEndX;
+
+        if (Math.abs(distance) < swipeThreshold) return;
+
+        if (distance > 0 && currentBlog < blogs.length - 1) {
+
+            currentBlog++;
+
+        }
+
+        else if (distance < 0 && currentBlog > 0) {
+
+            currentBlog--;
+
+        }
+
+        updateBlogSlider();
+
+        blogStartX = 0;
+        blogEndX = 0;
+
+    });
+
+}
 function createBlogCard(blog) {
 
     return `
