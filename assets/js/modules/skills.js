@@ -1,12 +1,12 @@
 function showSkills(data) {
 
-  const container = document.getElementById("skillsContainer");
+    const container = document.getElementById("skillsContainer");
 
-  let html = "";
+    let html = "";
 
-  data.forEach(category => {
+    data.forEach(category => {
 
-    html += `
+        html += `
 
             <div class="skill-category">
 
@@ -18,9 +18,9 @@ function showSkills(data) {
 
         `;
 
-    category.skills.forEach(skill => {
+        category.skills.forEach(skill => {
 
-      html += `
+            html += `
 
                 <div class="skill-card">
 
@@ -37,9 +37,9 @@ function showSkills(data) {
 
             `;
 
-    });
+        });
 
-    html += `
+        html += `
 
                 </div>
 
@@ -47,8 +47,8 @@ function showSkills(data) {
 
         `;
 
-  });
+    });
 
-  container.innerHTML = html;
+    container.innerHTML = html;
 
 }
