@@ -23,8 +23,7 @@ async function getLeetCodeStats(username) {
     );
 
 
-    const data =
-        response.data;
+    const data = response.data;
 
 
     if (
@@ -35,6 +34,36 @@ async function getLeetCodeStats(username) {
         throw new Error(
             "Invalid response from LeetCode statistics API"
         );
+
+    }
+
+
+    const totalSubmissions =
+        data.totalSubmissionNum?.find(
+            item => item.difficulty === "All"
+        );
+
+    const acceptedSubmissions =
+        data.acSubmissionNum?.find(
+            item => item.difficulty === "All"
+        );
+
+
+    let acceptance = "—";
+
+
+    if (
+        totalSubmissions &&
+        acceptedSubmissions &&
+        Number(totalSubmissions.submissions) > 0
+    ) {
+
+        acceptance =
+            `${(
+                Number(acceptedSubmissions.submissions) /
+                Number(totalSubmissions.submissions) *
+                100
+            ).toFixed(1)}%`;
 
     }
 
@@ -57,7 +86,13 @@ async function getLeetCodeStats(username) {
 
         hard: Number(
             data.hardSolved || 0
-        )
+        ),
+
+        acceptance,
+
+        ranking: "—",
+
+        contests: "—"
 
     };
 
