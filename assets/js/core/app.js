@@ -7,7 +7,6 @@ $(document).ready(function () {
     });
 
 
-
     fetchData("experience").then(data => {
 
         showExperience(data);
@@ -15,5 +14,19 @@ $(document).ready(function () {
     });
 
 
+    loadCodingData().then(data => {
+
+        if (data) {
+
+            initializeCodingAnimation();
+
+        }
+
+    });
+
+
+    initializeCodingRefresh();
+
+    initializeCodingAutoRefresh();
 
 });
