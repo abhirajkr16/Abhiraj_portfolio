@@ -41,33 +41,35 @@
   },
   {
     "status": "Completed",
-    "type": "Frontend",
+    "type": "Full Stack",
     "title": "Developer Portfolio",
-    "subtitle": "Modern Personal Portfolio",
-    "description": "Premium developer portfolio built using HTML5, CSS3 and Vanilla JavaScript featuring modular architecture, JSON-driven components, particle animations, glassmorphism UI and responsive design.",
+    "subtitle": "Modern Full-Stack Developer Portfolio",
+    "description": "Premium full-stack developer portfolio built using HTML5, CSS3, Vanilla JavaScript, Node.js and Express.js featuring modular architecture, JSON-driven components, glassmorphism UI, particle animations, responsive design and live coding statistics through a production REST API.",
     "image": "portfolio.png",
     "features": [
       "Responsive Design",
       "Glassmorphism UI",
-      "Particles.js",
-      "Typed.js",
-      "ScrollReveal",
-      "JSON Driven"
+      "Modular Architecture",
+      "REST API Integration",
+      "Live Coding Statistics",
+      "Server-Side Caching"
     ],
     "techStack": {
       "Frontend": [
         "HTML5",
         "CSS3",
-        "JavaScript"
+        "Vanilla JavaScript"
+      ],
+      "Backend": [
+        "Node.js",
+        "Express.js",
+        "REST API"
       ],
       "Libraries": [
         "Particles.js",
         "Typed.js",
-        "ScrollReveal"
-      ],
-      "Architecture": [
-        "JSON",
-        "Modular CSS"
+        "ScrollReveal",
+        "Axios"
       ],
       "Tools": [
         "Git",
