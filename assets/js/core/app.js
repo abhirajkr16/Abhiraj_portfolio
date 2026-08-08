@@ -27,6 +27,6 @@ $(document).ready(function () {
 
     initializeCodingRefresh();
 
-    initializeCodingAutoRefresh();
+
 
 });
