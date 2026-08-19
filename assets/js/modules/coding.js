@@ -134,7 +134,7 @@ function showCoding(data) {
 
         leetcodeStats[0].textContent = leetcode.acceptance;
 
-        leetcodeStats[1].textContent = "10,46,044";
+        leetcodeStats[1].textContent = "9,79,360";
 
         leetcodeStats[2].textContent = 0;
 
@@ -167,11 +167,11 @@ function showCoding(data) {
 
     if (gfgStats.length >= 3) {
 
-        gfgStats[0].textContent = "297";
+        gfgStats[0].textContent = "327";
 
-        gfgStats[1].textContent = "94";
+        gfgStats[1].textContent = "103";
 
-        gfgStats[2].textContent = "617";
+        gfgStats[2].textContent = "561";
     }
 
 
