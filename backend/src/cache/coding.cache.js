@@ -3,7 +3,7 @@ let cachedData = null;
 let cacheTimestamp = 0;
 
 const CACHE_TTL =
-    Number(process.env.CODING_CACHE_TTL || 300) * 1000;
+    Number(process.env.CODING_CACHE_TTL || 300) * 10000;
 
 
 function getCodingCache() {

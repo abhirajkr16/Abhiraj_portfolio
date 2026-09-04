@@ -3,8 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 
-const codingRoutes =
-    require("./routes/coding.routes");
+const codingRoutes = require("./routes/coding.routes");
 
 const app = express();
 
@@ -20,28 +19,18 @@ const allowedOrigins = [
 ];
 
 
-app.use(
-    cors({
-        origin: function (origin, callback) {
+app.use(cors({
+    origin: function (origin, callback) {
 
-            if (!origin) {
-
-                return callback(null, true);
-
-            }
-
-            if (allowedOrigins.includes(origin)) {
-
-                return callback(null, true);
-
-            }
-
-            return callback(
-                new Error("Not allowed by CORS")
-            );
-
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
         }
-    })
+        return callback(
+            new Error("Not allowed by CORS")
+        );
+
+    }
+})
 );
 
 

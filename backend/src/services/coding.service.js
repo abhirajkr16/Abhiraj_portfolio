@@ -17,16 +17,11 @@ async function getCodingStatistics() {
         getCodingCache();
 
     if (cachedData) {
-
         console.log(
             "Returning coding statistics from cache"
         );
-
         return cachedData;
-
     }
-
-
     console.log(
         "Fetching fresh coding statistics"
     );
