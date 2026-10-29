@@ -1,104 +1,53 @@
 const axios = require("axios");
 
-const LEETCODE_API =
-    "https://alfa-leetcode-api.onrender.com";
-
+const LEETCODE_API = "https://leetpulse-api.vercel.app/api/leetcode/solved";
 
 async function getLeetCodeStats(username) {
+  if (!username) {
+    throw new Error("LeetCode username is not configured");
+  }
 
-    if (!username) {
-
-        throw new Error(
-            "LeetCode username is not configured"
-        );
-
-    }
-
-
+  try {
     const response = await axios.get(
-        `${LEETCODE_API}/${username}/solved`,
-        {
-            timeout: 10000
-        }
+      `${LEETCODE_API}/${encodeURIComponent(username)}`,
+      { timeout: 15000 },
     );
-
 
     const data = response.data;
 
+    console.log("LeetCode solved stats:", data);
 
-    if (
-        !data ||
-        typeof data.solvedProblem === "undefined"
-    ) {
+    const stats = data?.data ?? data;
 
-        throw new Error(
-            "Invalid response from LeetCode statistics API"
-        );
+    const total = Number(stats?.solvedProblem ?? stats?.totalSolved);
 
+    if (!Number.isFinite(total)) {
+      throw new Error("LeetCode API did not return solved-problem statistics");
     }
 
-
-    const totalSubmissions =
-        data.totalSubmissionNum?.find(
-            item => item.difficulty === "All"
-        );
-
-    const acceptedSubmissions =
-        data.acSubmissionNum?.find(
-            item => item.difficulty === "All"
-        );
-
-
-    let acceptance = "—";
-
-
-    if (
-        totalSubmissions &&
-        acceptedSubmissions &&
-        Number(totalSubmissions.submissions) > 0
-    ) {
-
-        acceptance =
-            `${(
-                Number(acceptedSubmissions.submissions) /
-                Number(totalSubmissions.submissions) *
-                100
-            ).toFixed(1)}%`;
-
-    }
-
+    const easy = Number(stats.easySolved ?? stats.easy ?? 0);
+    const medium = Number(stats.mediumSolved ?? stats.medium ?? 0);
+    const hard = Number(stats.hardSolved ?? stats.hard ?? 0);
 
     return {
-
-        username,
-
-        total: Number(
-            data.solvedProblem
-        ),
-
-        easy: Number(
-            data.easySolved || 0
-        ),
-
-        medium: Number(
-            data.mediumSolved || 0
-        ),
-
-        hard: Number(
-            data.hardSolved || 0
-        ),
-
-        acceptance,
-
-        ranking: "—",
-
-        contests: "—"
-
+      username,
+      total,
+      easy,
+      medium,
+      hard,
+      acceptance: "—",
+      ranking: "—",
+      contests: "—",
     };
+  } catch (error) {
+    console.error("LeetCode request failed:", {
+      status: error.response?.status,
+      response: error.response?.data,
+      message: error.message,
+    });
 
+    throw error;
+  }
 }
 
-
-module.exports = {
-    getLeetCodeStats
-};
+module.exports = { getLeetCodeStats };

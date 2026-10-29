@@ -45,6 +45,10 @@
         "icon": "./assets/images/skills/express.svg"
       },
       {
+        "name": "Next.js",
+        "icon": "assets/images/skills/next.png"
+    },
+      {
         "name": "REST API",
         "icon": "./assets/images/skills/api.svg"
       }
@@ -61,6 +65,10 @@
         "name": "MySQL",
         "icon": "./assets/images/skills/mysql.svg"
       },
+      {
+        "name": "PostgreSQL",
+        "icon": "assets/images/skills/postgresql.svg"
+    },
       {
         "name": "Redis",
         "icon": "./assets/images/skills/redis.svg"
