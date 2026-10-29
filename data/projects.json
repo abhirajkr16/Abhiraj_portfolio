@@ -39,6 +39,49 @@
     "github": "https://github.com/abhirajkr16/URL-Shortner",
     "demo": "https://url-shortner-frontend-amber.vercel.app/"
   },
+  
+{
+  "status": "Completed",
+  "type": "Full Stack",
+  "title": "Project Manager",
+  "subtitle": "Client Project Dashboard with Role-Based Access",
+  "description": "Full-stack project management dashboard built with React, TypeScript, Node.js, Express.js and PostgreSQL. Features role-based access control for Admins, Project Managers and Developers, real-time updates with Socket.IO, persistent notifications, task tracking, analytics and automated overdue-task detection.",
+  "image": "projectmanager.png",
+  "features": [
+    "Role-Based Access Control",
+    "JWT Authentication",
+    "Real-Time Updates",
+    "Task Management",
+    "Persistent Notifications",
+    "Automated Overdue Tasks"
+  ],
+  "techStack": {
+    "Frontend": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS"
+    ],
+    "Backend": [
+      "Node.js",
+      "Express.js",
+      "JWT",
+      "Socket.IO"
+    ],
+    "Database": [
+      "PostgreSQL",
+      "SQL"
+    ],
+    "Tools": [
+      "Axios",
+      "Joi",
+      "node-cron",
+      "Git"
+    ]
+  },
+  "github": "https://github.com/abhirajkr16/Project-Manager",
+  "demo": "https://project-manager-ten-eta.vercel.app/"
+},
   {
     "status": "Completed",
     "type": "Full Stack",
@@ -79,6 +122,7 @@
     "github": "https://github.com/abhirajkr16/Abhiraj_portfolio",
     "demo": "https://abhiraj-portfolio-ivory.vercel.app/"
   },
+
   {
     "status": "Completed",
     "type": "Full Stack",
@@ -119,47 +163,6 @@
     },
     "github": "https://github.com/abhirajkr16/TradeWise",
     "demo": "https://github.com/abhirajkr16/TradeWise"
-  },
-  {
-    "status": "In Progress",
-    "type": "AI + Full Stack",
-    "title": "OrbitMinds",
-    "subtitle": "AI-Powered Precision Agriculture",
-    "description": "AI-powered agriculture platform using satellite imagery, Google Earth Engine and machine learning to detect crop type, moisture stress and generate intelligent irrigation recommendations.",
-    "image": "orbitminds.png",
-    "features": [
-      "Satellite Analysis",
-      "Crop Detection",
-      "Moisture Monitoring",
-      "AI Irrigation",
-      "LLM Assistant",
-      "Interactive Dashboard"
-    ],
-    "techStack": {
-      "Frontend": [
-        "React",
-        "HTML5",
-        "CSS3",
-        "JavaScript"
-      ],
-      "Backend": [
-        "Node.js",
-        "Express.js",
-        "Python",
-        "Flask"
-      ],
-      "AI": [
-        "Machine Learning",
-        "Google Earth Engine",
-        "LLM API"
-      ],
-      "Tools": [
-        "MongoDB",
-        "Docker",
-        "Git"
-      ]
-    },
-    "github": "#",
-    "demo": "#"
   }
+  
 ]
